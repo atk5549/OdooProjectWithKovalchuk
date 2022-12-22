@@ -1,1 +1,605 @@
-"" 
+*{
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  box-sizing: border-box;           
+}    
+
+
+.header{
+  display: flex; 
+  justify-content: center; /*раскидываем логотип и меню по разным краям*/
+  align-items: center; /*размещаем по центру*/
+  height: 110px;
+  background-color: #FFFFFF;
+}
+
+
+.logo{
+  
+  white-space: nowrap;
+  color: #000000;
+  font-size: 40px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer {
+  
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 681px;
+  left: 0px;
+  top: 2076px;
+  background: #817070;
+}
+
+.inputs_box {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;;
+  align-items: center;
+}
+
+
+input[type="text"] {
+  width: 400px;
+  height: 55px;
+  background: #817070;
+  border: 3px solid #FFFFFF;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  align-items: center;
+  text-align: center;
+}
+
+input[type="text"]:hover {
+
+  color: #FFFFFF;
+  background-color: rgba(102, 51, 0, 0.1);
+  border: 4px solid #C4C4C4;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+input[type="number"] {
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+
+  margin: 0px 32px;
+  
+  width: 130px;
+  height: 55px;
+  
+  background: #817070;
+  border: 3px solid #FFFFFF;
+  
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  
+
+  
+}
+
+
+input[type="number"]:hover {
+  background-color: rgba(102, 51, 0, 0.1);
+  border: 4px solid #C4C4C4;
+ 
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  
+}
+
+input[type="number"]::-webkit-input-placeholder {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+
+.order {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.submit {
+
+  margin-bottom: 0px;
+  
+  width: 190px;
+  height: 55px;
+
+  background: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  
+  text-align: center;
+  text-transform: uppercase;
+  color: #817070;
+}
+
+.submit:hover {
+  border: 4px solid #C4C4C4;
+}
+
+
+.checkboxes {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+
+
+
+  
+.left__checkboxes {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.right__checkboxes {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+  
+
+
+
+.item_checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 17px;
+}
+
+/* checkbox */
+
+.choice {
+  
+  -webkit-appearance: none;
+  appearance: none;
+/*   position: absolute; */
+}
+
+.checkbox__label {
+  padding-left: 35px;
+  white-space: nowrap;
+  
+  margin-left: 25px;
+  margin-right: 100px;
+  white-space: nowrap;
+  width: 117px;
+  height: 30px;
+
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+
+  /* ЗАПРЕЩАЮ ВЫДЕЛЯТЬ ТЕКСТ НА ЛЕЙБЛАХ*/
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.checkbox__label:before {
+  
+  content: "";
+  display: block;
+  min-width: 23px;
+  height: 23px;
+  border: 4px solid #C4C4C4;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  border-radius: 20%;
+  
+  
+}
+
+.checkbox__label:after {
+  
+  content: "";
+  min-width: 23px;
+  height: 23px;
+  border: 4px solid #C4C4C4;
+  background-color: #fff;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  border-radius: 20%;
+}
+
+
+/* checkbox */
+
+
+.choice:checked + .checkbox__label:after {
+  opacity: 0.6;
+  background-color: #663300;  
+}
+
+.checkbox__label:hover {
+  
+  opacity: 0.7;
+}
+
+
+.total {
+  
+  margin-bottom: 15px;
+  max-width: 122px;
+  height: 30px;
+  left: 658px;
+  top: 535px;
+
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  /* ЗАПРЕЩАЮ ВЫДЕЛЯТЬ ТЕКСТ НА ЛЕЙБЛАХ*
+  * Для эксплорера*/
+  -ms-user-select: none;
+   /*Для мозилы*/
+  -moz-user-select: none;
+  /* Для конкверора*/
+  -khtml-user-select: none;
+  /*Для Сафари и Хрома*/
+  -webkit-user-select: none;
+  
+}
+
+
+
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  
+  /* скрываем модальное окно */
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s;
+  pointer-events: none;
+  
+  /* ЗАПРЕЩАЮ ВЫДЕЛЯТЬ ТЕКСТ НА ЛЕЙБЛАХ*
+  * Для эксплорера*/
+  -ms-user-select: none;
+   /*Для мозилы*/
+  -moz-user-select: none;
+  /* Для конкверора*/
+  -khtml-user-select: none;
+  /*Для Сафари и Хрома*/
+  -webkit-user-select: none;
+  
+}
+
+._active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all; 
+  }
+
+
+
+
+.modal__bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  padding: 20px;
+}
+
+.modal__body {
+  margin: 8%;
+  padding: 24px;
+  background-color: #fff;
+  width: 30%;
+  min-width: 390px;
+  max-width: 390px;
+  
+  max-height: 350px; 
+  margin: auto;
+  max-height: 90%;
+  overflow: auto;
+  border-radius: 15px;
+  position: relative;
+  border: 3px solid white;
+  background: #817070;
+  
+}
+
+.confirmCancelButtons {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* кнопки модального окна */
+.modal__confirm, .modal__close {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 20px;
+  width: 150px;
+  height: 45px;
+  left: 625px;
+  top: 591px;
+
+  background: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #817070;
+}
+
+.modal__confirm:hover {
+  border: 4px solid #C4C4C4;
+}
+
+.modal__close:hover {
+  border: 4px solid #C4C4C4;
+}
+ 
+
+
+
+.goods__items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.checkItem {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+
+/* медиа-запрос - он нужен для того чтобы задать условия а именно 
+поведение элементов при заданной ширине*/
+@media screen and (min-width:240px) and (max-width:870px) {
+  
+  
+  
+  .inputs_box {
+    width: 100%;
+    
+    padding: 20px 20px;
+    height: 200px;
+    display: block;
+    align-items: center;
+    
+/*     flex-direction: column; */
+    
+  }
+  
+  
+  .checkboxes {
+    margin: 10px auto;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .footer {
+    width: 100%;
+/*     min-width: 200px; */
+    height: 881px;
+/*     padding: 0px 20px; */
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+  }
+  
+  input[type="text"] {
+    margin: 15px 0px;
+    width: 100%;
+    height: 45px;
+    background: #817070;
+    border: 3px solid #FFFFFF;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .left__checkboxes {
+    
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .right__checkboxes {
+    
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item_checkbox {
+    display: flex;
+
+    margin: 10px 0px;
+    width: 100%;
+    height: 55px;
+    
+    
+  }
+  
+
+  
+  
+  input[type="number"] {
+    margin-right: 0px;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+
+    background: #817070;
+    border: 3px solid #FFFFFF;
+
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+
+
+  }
+  
+  .checkbox__label {
+    
+    white-space: nowrap;
+    width: 50px;
+    height: 30px;
+    
+
+  }
+  
+  
+  .modal__body {
+    padding: 24px;
+    background-color: #fff;
+    width: 29%;
+    min-width: 280px; /* меняю ширину кнопок */
+    max-width: 290px;
+
+    max-height: 350px; 
+    margin: auto;
+    max-height: 90%;
+    overflow: auto;
+    border-radius: 15px;
+    position: relative;
+    border: 3px solid white;
+    background: #817070;
+
+  }
+  
+  /* кнопки модального окна */
+  .modal__confirm, .modal__close {
+
+    display: flex;
+    justify-content: center;
+    align-items: center; /*выравниваю по вертикали текст внутри кнопок по центру*/
+    margin-top: 20px;
+    width: 110px;
+    height: 25px;
+    font-size: 9px;
+  }
+  
+  .checkItem {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+  
+  
+
+
+  
+
+  
+
+}
